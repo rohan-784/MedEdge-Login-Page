@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="user.css">
+</head>
+<body>
+  <header>
+    <nav class="navigation">
+      <button class="login-button" id="loginBtn">Login</button>
+    </nav>
+  </header>
+
+  <div id="loginPopup" class="popup wrapper">
+    <div class="popup-content">
+      <button class="closeBtn close">&times;</button>
+      <h2 class="heading">Select User Type :</h2>
+      <div class="login-options">
+        <button class="loginTypeBtn pat" data-type="patient">
+          <span class="material-symbols-outlined gradient-icon">person</span>
+            <p>Login as Patient</p>
+        </button>
+        <button class="loginTypeBtn dot" data-type="doctor">
+          <span class="material-symbols-outlined doc">stethoscope</span>
+            <p>Login as Doctor</p>
+        </button>
+        <button class="loginTypeBtn labo" data-type="lab">
+          <span class="material-symbols-outlined labperson">clinical_notes</span>
+            <p>Login as Lab Incharge</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loginPage" class="popup wrapper2">
+    <div class="popup-content1">
+      <button class="closeBtn close1">&times;</button>
+      <h2 class="heading2">Login</h2>
+      <form class="form-box login" id="loginForm">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input id="loginEmail" type="email" placeholder="Email" required>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input id="loginPassword" type="password" placeholder="Password" maxlength="8" required>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-register">
+          <p>
+            Don't have an account? 
+            <a href="#" id="registerLink">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="registerPage" class="popup wrapper3">
+    <div class="popup-content2">
+      <button class="closeBtn close2">&times;</button>
+      <h2 class="heading3">Register</h2>
+      <form id="registerForm">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input id="registerUsername" type="text" placeholder="Username" required>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input id="registerEmail" type="email" placeholder="Email" required>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input id="registerPassword" type="password" placeholder="Password" maxlength="8" required>
+        </div>
+        <div class="remember-forgot">
+          <label>
+            <input type="checkbox" /> I agree to the terms & conditions
+          </label>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <div class="login-register">
+          <p>
+            Already have an account? 
+            <a href="#" id="loginLink">Login</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="user.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
